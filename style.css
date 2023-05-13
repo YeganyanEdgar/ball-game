@@ -1,5 +1,6 @@
 body {
-    background-color: lightgreen;
+    margin: 0;
+
 }
 
 .ball {
@@ -23,3 +24,8 @@ input, button {
     height: 30px;
 }
 
+#gameContainer {
+    height: 500px;
+    width: 1000px;
+    background-color: blueviolet;
+}

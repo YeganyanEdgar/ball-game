@@ -20,14 +20,16 @@ startBtn.addEventListener('click', function() {
     const player2Name = player2Input.value;
     // let firstLetter = text.charAt(0);
     // myBall.insertElement(firstLetter);
+    start(player1Name, player2Name);
+    playerParamsEl.remove();
 
-    if (player1Name && player2Name) {
-        playerParamsEl.remove();
-        start({player1Name, player2Name});
-    } else {
-        alert('Please feel inputs');
-    }
-});
+//     if (player1Name && player2Name) {
+//         playerParamsEl.remove();
+//         start({player1Name, player2Name});
+//     } else {
+//         alert('Please feel inputs');
+//     }
+ });
 
 
 

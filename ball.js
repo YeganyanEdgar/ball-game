@@ -10,8 +10,10 @@ class Ball {
         const ballEl = document.createElement('div');
         ballEl.classList.add('ball');
         ballEl.style.background = color;
-        document.body.appendChild(ballEl);
-        ball.innerHTML = name[0].toUpperCase();
+        // Instead of document you should append ball to the game-container element
+        const gameContainer = document.querySelector("#gameContainer");
+        gameContainer.appendChild(ballEl);
+        // ballEl.innerHTML = name[0].toUpperCase();
         this.element = null;
         this.initListeners();
         this.ballEl = ballEl;
@@ -24,18 +26,30 @@ class Ball {
         this.element = letter;
     }
     moveRight() {
+        if (this.left >= 500) {
+            return
+        }
         this.left += this.speed;
         this.ballEl.style.left = `${this.left}px`;
     }
     moveLeft() {
+        if (this.left === 0) { 
+            return;
+        }
         this.left -= this.speed;
         this.ballEl.style.left = `${this.left}px`;
     }
     moveDown() {
+        if (this.top >= 700) {
+            return;
+        }
         this.top += this.speed;
         this.ballEl.style.top = `${this.top}px`;
     }
-    moveUp() {
+    moveUp() { 
+        if (this.top === 0) {
+            return;
+        }
         this.top -= this.speed;
         this.ballEl.style.top = `${this.top}px`;
     }
