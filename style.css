@@ -1,0 +1,25 @@
+body {
+    background-color: lightgreen;
+}
+
+.ball {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, button {
+    font-size: 20px;
+}
+
+.food {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+}
+
